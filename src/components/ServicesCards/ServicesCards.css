@@ -43,17 +43,32 @@
 /* Grid responsive */
 .services__container--cards {
   display: grid;
-
-  /* ✅ CAMBIADO de auto-fit a auto-fill para evitar reorganización al cargar
-     auto-fill: mantiene el grid estable desde el inicio
-     auto-fit: colapsa columnas vacías causando reorganización */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-
   gap: 30px;
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+/* Desktop: 3 columnas fijas para evitar "saltos" al cargar */
+@media (min-width: 1024px) {
+  .services__container--cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .services__container--cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 639px) {
+  .services__container--cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .services__card {

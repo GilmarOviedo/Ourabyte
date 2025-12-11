@@ -1,0 +1,227 @@
+/* 
+   WORK PAGE
+*/
+
+.work-page {
+  background-color: var(--color-background);
+  color: var(--color-text-light);
+  font-family: var(--font-family);
+  padding: var(--spacing-5xl) 0 var(--spacing-6xl) 0; 
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ====== INTRO: What is OuraByte ====== */
+.work-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-3xl);
+}
+
+.work-intro__text {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.work-intro__title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-7xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.work-intro__desc {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-gray);
+}
+
+.work-intro__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+@keyframes ouroboros-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===============================
+   SECCIÓN OUR TEAM
+   =============================== */
+.work-team {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.work-team .work-section__title {
+  background-image: url('../../assets/images/ourServicesBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-lg);
+  font-size: var(--font-size-4xl);
+  padding: var(--spacing-xl) 0;
+  margin: var(--spacing-5xl) auto var(--spacing-3xl);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.work-team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-5xl);
+  justify-items: center;
+}
+
+/* PERSONAS */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 295px;
+}
+
+.team-member__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.team-member__frame {
+  width: 295px;
+  height: 408px;
+  border: var(--border-width-normal) solid var(--color-green-border);
+  border-radius: var(--border-radius-sm);
+  background: var(--color-green-alpha);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  padding: var(--spacing-sm);
+}
+
+.team-member__frame:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-glow);
+}
+
+.team-member__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.team-member__desc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-gray);
+  margin-top: var(--spacing-xs);
+  max-width: 280px;
+}
+
+/* ===============================
+   SECCIÓN MISIÓN / VISIÓN
+   =============================== */
+.work-mission-vision {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-7xl);
+}
+
+.work-mission,
+.work-vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-5xl);
+}
+
+.work-mission__text,
+.work-vision__text {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  line-height: var(--line-height-loose);
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-section__subtitle {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.work-mission__frame,
+.work-vision__frame {
+  flex: 1 1 45%;
+  background: var(--color-green-alpha);
+  border: var(--border-width-normal) solid var(--color-green-border);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 440px;
+  padding: 14px;
+  transition: all var(--transition-normal);
+}
+
+.work-mission__frame img,
+.work-vision__frame img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  object-fit: cover;
+}
+
+.work-mission__frame:hover,
+.work-vision__frame:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 1200px) {
+  .work-page {
+    padding: var(--spacing-4xl) 0 var(--spacing-5xl) 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-mission,
+  .work-vision {
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+  }
+
+  .work-mission__frame,
+  .work-vision__frame {
+    max-width: 90%;
+  }
+
+  .work-mission__text,
+  .work-vision__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-page {
+    padding: var(--spacing-3xl) 0 var(--spacing-5xl) 0;
+  }
+}

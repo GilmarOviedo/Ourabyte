@@ -1,0 +1,59 @@
+
+/*
+.services__wrapper {
+  padding: 20px 50px;
+  background-color: #001f1c;
+  color: white;
+}
+
+.services__header {
+  background-image: url('../../assets/ourServicesBackground.jpg');
+  width: 1050px;
+  height: 155px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.services__header-title {
+  font-size: 38px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.services__header-text {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-align: center;
+  max-width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .services__wrapper {
+    padding: 20px 20px;
+  }
+
+  .services__header {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .services__header-title {
+    font-size: 24px;
+  }
+
+  .services__header-text {
+    font-size: 14px;
+  }
+}
+  */
+  

@@ -1,0 +1,213 @@
+/* ===== CONTENEDOR GENERAL ===== */
+.prisma-page {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: var(--spacing-6xl) var(--container-padding-desktop);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+.prisma__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-5xl);
+  margin-bottom: var(--spacing-4xl);
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prisma__text-block {
+  flex: 1;
+  min-width: 320px;
+  max-width: 620px;
+}
+
+.prisma__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.prisma__subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.prisma__text {
+  font-size: var(--font-size-base);
+  font-weight: 200;
+  color: var(--color-text-light);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+}
+
+/* ===== IMAGEN PRINCIPAL ===== */
+.prisma__image-main {
+  background: var(--color-green-alpha);
+  border: var(--border-width-normal) solid var(--color-green-border);
+  border-radius: var(--border-radius-md);
+  padding: 14px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: var(--box-shadow-md);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.prisma__image-main img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  object-fit: contain;
+}
+
+/* ===== SECCIÓN DE RESULTADOS ===== */
+.prisma__section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+  text-align: left;
+}
+
+/* ===== GRID 2x3 ===== */
+.prisma__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-5xl) var(--spacing-6xl);
+  justify-content: center;
+  align-items: start;
+  max-width: var(--container-max-width);
+  margin: 0 auto var(--spacing-6xl);
+}
+
+/* ===== BLOQUES ===== */
+.prisma__pair {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 480px;
+  width: 100%;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+/* ===== TÍTULOS ===== */
+.prisma__pair-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+  width: 100%;
+  transition: color var(--transition-normal);
+}
+
+/* ===== MARCO DE IMAGEN (resultados) – mismo encuadre que Testimonials ===== */
+.prisma__image-frame {
+  background: var(--color-green-alpha);
+  border: var(--border-width-normal) solid var(--color-green-border);
+  border-radius: var(--border-radius-md);
+  padding: 14px;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.prisma__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+}
+
+/* ===== TEXTO ===== */
+.prisma__pair-text {
+  font-size: var(--font-size-base);
+  font-weight: 200;
+  color: var(--color-text-light);
+  line-height: 1.55;
+  text-align: justify;
+  margin-top: var(--spacing-lg);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+/* ===== EFECTOS DE HOVER ===== */
+.prisma__pair:hover {
+  transform: translateY(-4px);
+}
+
+.prisma__pair:hover .prisma__image-frame {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.prisma__pair:hover .prisma__pair-title {
+  color: var(--color-secondary);
+}
+
+.prisma__pair:hover .prisma__pair-text {
+  opacity: 0.95;
+  transform: translateY(2px);
+}
+
+/* ===== FOOTER ===== */
+.prisma-footer-wrapper {
+  background: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-7xl);
+}
+
+.prisma-footer-wrapper .ourabyte-footer {
+  width: 100%;
+  /* ✅ ELIMINADO max-width para que el amarillo llegue al borde derecho */
+  margin: 0 auto;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 992px) {
+  .prisma__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .prisma__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4xl);
+  }
+
+  .prisma__pair {
+    align-items: center;
+    text-align: center;
+  }
+
+  .prisma__pair-title,
+  .prisma__pair-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}

@@ -1,0 +1,146 @@
+.sent-flow-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #001f1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.sent-flow-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #001f1c;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.sent-flow-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sent-flow-header nav ul li {
+  margin: 5px 10px;
+}
+
+.sent-flow-header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sent-flow-header nav ul li a:hover {
+  background-color: #C8E100;
+  color: #001f1c;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #001f1c;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #001f1c;
+}
+
+.form-container input[type="number"],
+.form-container input[type="tel"],
+.form-container input[type="text"],
+.form-container textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #C8E100;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #001f1c;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #a6d700;
+}
+
+#logoutBtn,
+#logoutBtn2 {
+  width: 100%;
+  padding: 10px;
+  background-color: #f44336;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#logoutBtn:hover,
+#logoutBtn2:hover {
+  background-color: #e60000;
+}
+
+@media (max-width: 600px) {
+  .sent-flow-page {
+    padding-top: 70px;
+  }
+
+  .sent-flow-header nav ul li a {
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-container button {
+    font-size: 1rem;
+  }
+
+  #logoutBtn,
+  #logoutBtn2 {
+    font-size: 1rem;
+  }
+}
